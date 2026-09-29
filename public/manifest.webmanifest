@@ -1,0 +1,17 @@
+{
+  "name": "Sinoikía",
+  "short_name": "Sinoikía",
+  "description": "Condiciones para vivir en comunidad",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f3eee3",
+  "theme_color": "#153f35",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
