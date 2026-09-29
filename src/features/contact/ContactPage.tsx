@@ -4,8 +4,8 @@ import { useSearchParams } from 'react-router-dom'
 type SubmitStatus = 'idle' | 'sending' | 'success' | 'error'
 
 const recipient = String.fromCharCode(
-  102, 48, 97, 99, 101, 54, 49, 50, 49, 57, 56, 101, 101, 53, 55, 48,
-  50, 50, 102, 50, 52, 49, 52, 102, 55, 56, 51, 99, 48, 48, 49, 97,
+  112, 101, 108, 105, 46, 116, 108, 99, 64, 103, 109, 97, 105, 108, 46, 99,
+  111, 109,
 )
 
 const profiles = [
@@ -44,7 +44,11 @@ export function ContactPage() {
         }),
       })
 
-      if (!response.ok) throw new Error('Request failed')
+      if (!response.ok) {
+        const errorBody = await response.text()
+        console.error('FormSubmit request failed', response.status, errorBody)
+        throw new Error('Request failed')
+      }
       form.reset()
       setStatus('success')
     } catch {
