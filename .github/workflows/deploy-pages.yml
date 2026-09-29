@@ -33,6 +33,7 @@ jobs:
       - name: Build for repository Pages
         env:
           SINOIKIA_BASE_PATH: /Sinoikia/
+          VITE_WEB3FORMS_ACCESS_KEY: ${{ vars.WEB3FORMS_ACCESS_KEY }}
         run: npm run build
       - name: Configure Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
