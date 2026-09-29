@@ -16,7 +16,10 @@ La aplicación funciona con contenido sintético aunque Supabase no esté config
 ```text
 VITE_SUPABASE_URL=
 VITE_SUPABASE_PUBLISHABLE_KEY=
+VITE_WEB3FORMS_ACCESS_KEY=
 ```
+
+El formulario de contacto necesita una clave de Web3Forms creada para `peli.tlc@gmail.com`. En local se usa `VITE_WEB3FORMS_ACCESS_KEY`; para GitHub Pages, configura la variable del repositorio `WEB3FORMS_ACCESS_KEY`. La clave es pública por diseño porque el envío se realiza desde el navegador. Sin ella, el formulario queda deshabilitado y no promete una entrega que no puede realizar.
 
 ## Comprobaciones
 
