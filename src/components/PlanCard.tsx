@@ -15,6 +15,7 @@ export function PlanCard({ plan, compact = false }: { plan: ExamplePlan; compact
         <span className="plan-card__house" />
       </div>
       <div className="plan-card__body">
+        <p className="concept-tag">Ejemplo conceptual · no es una oferta real</p>
         <p className="plan-card__place">
           {plan.place} <span>{plan.province}</span>
         </p>
@@ -42,7 +43,7 @@ export function PlanCard({ plan, compact = false }: { plan: ExamplePlan; compact
           {blocked && <p>Queda una condición imprescindible por cubrir</p>}
         </div>
         <Link className="text-link" to="/descubrir">
-          Comprobar mi encaje <span aria-hidden="true">↗</span>
+          Explorar mi orientación <span aria-hidden="true">↗</span>
         </Link>
       </div>
     </article>

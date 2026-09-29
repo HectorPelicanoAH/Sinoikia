@@ -24,10 +24,10 @@ export function TerritoriesPage() {
     <main id="contenido" className="territories-page">
       <section className="page-hero page-shell">
         <p className="eyebrow">Explorar</p>
-        <h1>Pueblos con un plan detrás</h1>
+        <h1>Así podrían ser los planes</h1>
         <p className="page-intro">
-          Busca oportunidades que conectan vivienda, ingresos, servicios y comunidad. Verás tanto lo
-          confirmado como lo que todavía depende de otras condiciones.
+          Estos casos son ejemplos conceptuales, no oportunidades publicadas. Sirven para explorar
+          cómo se mostrarían la vivienda, los ingresos, los servicios y las condiciones pendientes.
         </p>
       </section>
 
@@ -62,7 +62,7 @@ export function TerritoriesPage() {
 
         <div className="results-heading" aria-live="polite">
           <p><strong>{filteredPlans.length}</strong> planes de ejemplo</p>
-          <span>La información se actualizará con cada revisión municipal.</span>
+          <span>Datos simulados para explicar el método.</span>
         </div>
 
         {filteredPlans.length > 0 ? (

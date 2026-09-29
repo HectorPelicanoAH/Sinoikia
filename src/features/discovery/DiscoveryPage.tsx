@@ -36,17 +36,17 @@ export function DiscoveryPage() {
       <main id="contenido" className="discovery-page discovery-result page-shell">
         <div className="discovery-result__copy">
           <p className="eyebrow">Primera orientación</p>
-          <h1>Hay una opción que merece una conversación</h1>
+          <h1>Así podría verse una primera orientación</h1>
           <p className="page-intro">
-            Este resultado se basa solo en tus tres respuestas iniciales. Muestra una coincidencia
-            posible, no una recomendación automática ni una garantía de viabilidad.
+            Este resultado usa un caso conceptual y solo tus tres respuestas iniciales. No representa
+            una oportunidad disponible, una recomendación automática ni una garantía de viabilidad.
           </p>
           <div className="match-reasons">
             <h2>Por qué aparece</h2>
             <ul>
-              <li>El tipo de actividad encaja con una necesidad declarada.</li>
-              <li>El horizonte del plan admite una exploración gradual.</li>
-              <li>La vivienda aún necesita revisión antes de asumir disponibilidad.</li>
+              <li>El ejemplo muestra la actividad que has elegido explorar.</li>
+              <li>Tu horizonte serviría para ordenar una conversación real.</li>
+              <li>La vivienda necesitaría confirmación antes de asumir disponibilidad.</li>
             </ul>
           </div>
           <button className="text-link button-reset" type="button" onClick={() => setShowResult(false)}>
@@ -64,8 +64,8 @@ export function DiscoveryPage() {
         <p className="eyebrow">Quiero descubrir</p>
         <h1>Empecemos por la vida que quieres sostener</h1>
         <p className="page-intro">
-          Esta primera orientación no pide datos personales. Nos ayuda a explicar qué podría encajar
-          y qué información faltaría para tomar una decisión.
+          Esta demostración no pide datos personales ni consulta oportunidades reales. Nos ayuda a
+          explicar qué habría que comprobar antes de tomar una decisión.
         </p>
       </section>
 
