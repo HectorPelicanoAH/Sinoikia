@@ -1,0 +1,2 @@
+-- Phase 0 intentionally has no domain fixtures. Each feature adds synthetic seed
+-- data alongside its schema so local environments remain deterministic.
