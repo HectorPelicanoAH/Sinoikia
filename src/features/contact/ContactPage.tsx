@@ -1,7 +1,8 @@
 import { useState, type FormEvent } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { readDeliveryResult } from './formSubmit'
 
-type SubmitStatus = 'idle' | 'sending' | 'success' | 'error'
+type SubmitStatus = 'idle' | 'sending' | 'success' | 'activation' | 'error'
 
 const recipient = String.fromCharCode(
   112, 101, 108, 105, 46, 116, 108, 99, 64, 103, 109, 97, 105, 108, 46, 99,
@@ -25,12 +26,15 @@ export function ContactPage() {
     event.preventDefault()
     const form = event.currentTarget
     const formData = new FormData(form)
+    const controller = new AbortController()
+    const timeout = window.setTimeout(() => controller.abort(), 12000)
     setStatus('sending')
 
     try {
       const response = await fetch(`https://formsubmit.co/ajax/${recipient}`, {
         method: 'POST',
         headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+        signal: controller.signal,
         body: JSON.stringify({
           name: formData.get('name'),
           email: formData.get('email'),
@@ -41,18 +45,17 @@ export function ContactPage() {
           _subject: 'Nuevo contacto desde SINOIKÍA',
           _captcha: 'false',
           _template: 'table',
+          _url: window.location.href,
         }),
       })
 
-      if (!response.ok) {
-        const errorBody = await response.text()
-        console.error('FormSubmit request failed', response.status, errorBody)
-        throw new Error('Request failed')
-      }
-      form.reset()
-      setStatus('success')
+      const delivery = await readDeliveryResult(response)
+      if (delivery === 'success') form.reset()
+      setStatus(delivery)
     } catch {
       setStatus('error')
+    } finally {
+      window.clearTimeout(timeout)
     }
   }
 
@@ -84,7 +87,7 @@ export function ContactPage() {
           <label>Mensaje<textarea name="message" rows={6} required /></label>
           <p className="contact-form__note">Cuéntanos qué necesitas, qué puedes aportar o qué pueblo tienes en mente. Contactar no implica ningún compromiso.</p>
           <p className="contact-form__status" data-status={status} role="status" aria-live="polite">
-            {status === 'sending' ? 'Enviando...' : status === 'success' ? 'Gracias. Tu mensaje se ha enviado correctamente.' : status === 'error' ? 'No hemos podido enviar tu mensaje. Inténtalo de nuevo en unos minutos.' : ''}
+            {status === 'sending' ? 'Enviando...' : status === 'success' ? 'Gracias. Tu mensaje se ha enviado correctamente.' : status === 'activation' ? 'El destino del formulario aún requiere activación. Tu mensaje no se ha entregado; inténtalo más tarde.' : status === 'error' ? 'No hemos podido confirmar el envío. Inténtalo de nuevo en unos minutos.' : ''}
           </p>
           <button className="button button--primary" type="submit" disabled={status === 'sending'}>{status === 'sending' ? 'Enviando...' : 'Enviar consulta'}</button>
         </form>
