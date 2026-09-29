@@ -626,7 +626,7 @@ p { line-height: 1.65; }
 .contact-form .contact-form__honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .contact-form__note { margin: 16px 0 0; color: #6c6255; font-size: .88rem; }
 .contact-form__status { min-height: 1.6em; margin: 16px 0 0; color: var(--forest-900); font-size: .88rem; }
-.contact-form__status[data-status="error"] { color: #a6472f; }
+.contact-form__status[data-status="error"], .contact-form__status[data-status="activation"] { color: #a6472f; }
 .contact-form > .button { margin-top: 20px; padding-inline: 26px; }
 
 @media (max-width: 1220px) { .header-actions { display: none; } }
