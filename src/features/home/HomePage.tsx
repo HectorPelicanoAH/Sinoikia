@@ -100,7 +100,7 @@ export function HomePage() {
               <div><p className="eyebrow">Para personas y hogares</p><h3>Busca una vida que pueda sostenerse</h3><p>Cuéntanos qué necesitas, qué sabes hacer, quién forma parte de tu hogar y en qué condiciones te plantearías un cambio. Te mostraremos lugares donde podrías encajar, condiciones todavía pendientes y necesidades a las que podrías contribuir.</p><Link className="button button--primary" to="/descubrir">Encontrar mi lugar</Link></div>
             </article>
             <article>
-              <ConceptImage id="municipios" caption="Escena conceptual: pueblos cercanos estudian rutas compartidas." />
+              <ConceptImage id="municipios" caption="Escena conceptual: una ruta compartida conecta pueblos cercanos." />
               <div><p className="eyebrow">Para municipios</p><h3>Convierte necesidades dispersas en un plan común</h3><p>Ordena la realidad del territorio, compara opciones y prepara un plan con condiciones, responsables y límites claros. El equipo de Sinoikía revisará la primera publicación para asegurar que la información sea comprensible, prudente y verificable.</p><Link className="button button--ghost" to="/municipios">Activar mi municipio</Link></div>
             </article>
           </div>
@@ -110,7 +110,7 @@ export function HomePage() {
       <section className="narrative-section territory-vision" aria-labelledby="territory-title">
         <div className="page-shell narrative-split">
           <div className="narrative-copy"><p className="eyebrow">Un territorio compartido</p><h2 id="territory-title">Una comunidad completa puede abarcar varios pueblos</h2><p>No hace falta que cada pueblo tenga todos los servicios dentro de su término municipal. Hace falta que las personas puedan acceder a lo necesario para sostener su vida cotidiana. Sinoikía ayuda a organizar ese territorio compartido como una comunidad y no como una suma de municipios aislados.</p></div>
-          <ConceptImage id="municipios" caption="Escena conceptual: la colaboración también cruza límites municipales." />
+          <ConceptImage id="territorio" caption="Escena conceptual: la vida cotidiana cruza límites municipales." />
         </div>
       </section>
 

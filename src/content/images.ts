@@ -1,4 +1,4 @@
-export type ImageId = 'hero' | 'problema' | 'propuesta' | 'vivienda' | 'comercio' | 'personas' | 'municipios' | 'cierre'
+export type ImageId = 'hero' | 'problema' | 'propuesta' | 'vivienda' | 'comercio' | 'personas' | 'municipios' | 'territorio' | 'cierre'
 
 type ImageAsset = {
   alt: string
@@ -14,7 +14,8 @@ export const images: Record<ImageId, ImageAsset> = {
   vivienda: { alt: 'Una propietaria abre una vivienda mientras otra persona revisa su estado y toma notas.', width: 1200, height: 800 },
   comercio: { alt: 'Una comerciante prepara cajas de productos cotidianos para repartir entre pueblos cercanos.', width: 1200, height: 800 },
   personas: { alt: 'Dos personas conversan con un comerciante local en una plaza de pueblo.', width: 1200, height: 800 },
-  municipios: { alt: 'Representantes y vecinos de varios pueblos trabajan juntos sobre un mapa de rutas.', width: 1200, height: 800 },
+  municipios: { alt: 'Un minibús comarcal se detiene junto a una marquesina en la carretera que conecta dos pueblos.', width: 1200, height: 800 },
+  territorio: { alt: 'Tres pueblos de un valle rural están conectados por caminos entre campos y olivares.', width: 1200, height: 800 },
   cierre: { alt: 'Comercio abierto, vecinos y un profesional junto a una furgoneta en una calle habitada.', width: 1200, height: 800 },
 }
 
