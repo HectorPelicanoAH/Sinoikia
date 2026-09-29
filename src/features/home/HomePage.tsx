@@ -9,7 +9,7 @@ export function HomePage() {
       <section className="narrative-hero page-shell" aria-labelledby="hero-title">
         <div className="narrative-hero__copy">
           <p className="eyebrow">Sinoikía · Habitar juntos</p>
-          <h1 id="hero-title">Construir una vida posible</h1>
+          <h1 id="hero-title">El futuro es rural</h1>
           <p className="narrative-hero__lead">Sinoikía nace de una idea sencilla: un pueblo cobra vida cuando vivienda, trabajo, servicios y personas consiguen encajar.</p>
           <p>Ayudamos a pueblos y personas a reunir esas piezas y convertir necesidades dispersas en planes de vida posibles.</p>
           <div className="narrative-actions">
