@@ -10,7 +10,7 @@ export function MunicipalityPage() {
           <p className="eyebrow">Para ayuntamientos y agrupaciones</p>
           <h1>Activar mi municipio</h1>
           <p className="page-intro">Convierte necesidades dispersas en un plan común. Sinoikía ayuda a ordenar la realidad del territorio, explorar alternativas y publicar condiciones claras tras una revisión humana.</p>
-          <a className="button button--primary" href="mailto:hola@sinoikia.es?subject=Activar%20mi%20municipio">Hablar con el proyecto</a>
+          <Link className="button button--primary" to="/contacto?perfil=municipio">Hablar con el proyecto</Link>
         </div>
         <ConceptImage id="municipios" caption="Escena conceptual: un servicio compartido conecta pueblos cercanos." />
       </section>

@@ -30,7 +30,7 @@ export function AppShell() {
     <Link to="/#como-funciona" onClick={() => setOpen(false)}>Cómo funciona</Link>
     <Link to="/pueblos" onClick={() => setOpen(false)}>Explorar</Link>
     <Link to="/municipios" onClick={() => setOpen(false)}>Para municipios</Link>
-    <a href="mailto:hola@sinoikia.es">Contacto</a>
+    <Link to="/contacto" onClick={() => setOpen(false)}>Contacto</Link>
   </>
 
   return <>
@@ -43,6 +43,6 @@ export function AppShell() {
       </div>
     </header>
     <Outlet />
-    <footer className="site-footer"><div className="site-footer__inner"><div><Link className="site-footer__brand" to="/">Sinoikía</Link><p>Construir una vida posible, juntos.</p></div><nav className="site-footer__links" aria-label="Enlaces del pie"><Link to="/privacidad">Privacidad</Link><Link to="/terminos">Términos</Link><a href="mailto:hola@sinoikia.es">Contacto</a></nav><p className="site-footer__note">Las escenas y planes de ejemplo son conceptuales. Una oportunidad solo se considera disponible cuando se comprueban sus condiciones.</p></div></footer>
+    <footer className="site-footer"><div className="site-footer__inner"><div><Link className="site-footer__brand" to="/">Sinoikía</Link><p>Construir una vida posible, juntos.</p></div><nav className="site-footer__links" aria-label="Enlaces del pie"><Link to="/privacidad">Privacidad</Link><Link to="/terminos">Términos</Link><Link to="/contacto">Contacto</Link></nav><p className="site-footer__note">Las escenas y planes de ejemplo son conceptuales. Una oportunidad solo se considera disponible cuando se comprueban sus condiciones.</p></div></footer>
   </>
 }

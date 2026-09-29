@@ -81,7 +81,6 @@ export function HomePage() {
             <p>Una persona interesada no es todavía un compromiso. Una vivienda vacía no es necesariamente una vivienda disponible. Una ayuda solicitada no es financiación concedida. Sinoikía diferencia lo que se ha propuesto, lo que está siendo revisado y lo que ya se ha confirmado.</p>
           </div>
           <ul className="honesty-points">
-            <li>Los estados se explican con palabras; el color solo acompaña.</li>
             <li>Una condición imprescindible puede impedir que un plan esté listo.</li>
             <li>Los datos muestran fuente y fecha de revisión.</li>
             <li>Los estados pueden retroceder si cambia la realidad.</li>
