@@ -608,6 +608,7 @@ p { line-height: 1.65; }
 .closing-section__copy { position: relative; z-index: 1; padding-block: 90px; }
 .closing-section .eyebrow { color: #f2be9b; }
 .closing-section h2 { max-width: 700px; color: white; }
+.closing-section h3 { color: white; }
 .closing-section__copy > p:not(.eyebrow) { max-width: 600px; font-size: 1.15rem; }
 .closing-section .button { margin-top: 18px; }
 .municipality-hero { padding-block: clamp(70px, 9vw, 125px); display: grid; grid-template-columns: 1fr .9fr; align-items: center; gap: 7vw; }
