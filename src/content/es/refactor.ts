@@ -1,31 +1,18 @@
 export const processSteps = [
-  { number: '01', title: 'Entender el pueblo', description: 'Recoger necesidades, recursos, viviendas, actividades, servicios y límites. Cada dato conserva su origen y fecha de revisión.' },
-  { number: '02', title: 'Explorar posibilidades', description: 'Comparar alternativas: relevo, actividad combinada, servicio itinerante, cooperación entre pueblos o apoyo público.' },
-  { number: '03', title: 'Construir el plan', description: 'Convertir la opción elegida en condiciones concretas, responsables y dependencias visibles.' },
-  { number: '04', title: 'Reunir a las personas', description: 'Abrir el plan a aportaciones e intereses y revisar el encaje antes de presentar compromisos.' },
+  { number: '01', title: 'Entender', description: '¿Qué necesita el territorio? ¿Qué recursos existen? ¿Qué viviendas, actividades, servicios y capacidades tenemos?' },
+  { number: '02', title: 'Imaginar', description: '¿Qué combinaciones podrían funcionar? Un relevo, un nuevo servicio, una actividad compartida o varios pueblos colaborando.' },
+  { number: '03', title: 'Comprobar', description: '¿Qué tendría que cumplirse para hacerlo viable? Sinoikía convierte la idea en condiciones concretas y muestra cuáles están confirmadas y cuáles no.' },
+  { number: '04', title: 'Conectar', description: 'Cuando existe una oportunidad comprensible, conectamos personas que puedan encajar en ella con personas del territorio que puedan hacerla posible.' },
 ]
 
 export type ExampleState = 'interested' | 'pending' | 'reviewing' | 'confirmed'
 
-export const exampleConditions: {
-  condition: string
-  state: ExampleState
-  label: string
-  meaning: string
-  critical?: boolean
-}[] = [
-  { condition: 'Persona u hogar que asuma la actividad', state: 'interested', label: 'Interés', meaning: 'Existe una candidatura, pero aún no ha revisado todas las condiciones.' },
-  { condition: 'Vivienda habitable y asequible', state: 'pending', label: 'Pendiente', meaning: 'Hay una casa vacía, pero el propietario no ha confirmado su disponibilidad.', critical: true },
-  { condition: 'Local y condiciones de relevo', state: 'confirmed', label: 'Confirmado', meaning: 'El espacio, el precio y el calendario están acordados.' },
-  { condition: 'Demanda mínima compartida', state: 'reviewing', label: 'En revisión', meaning: 'Los tres pueblos están contrastando compras y servicios necesarios.' },
-  { condition: 'Ruta de reparto', state: 'confirmed', label: 'Confirmado', meaning: 'Existen vehículo, horario y responsables definidos.' },
+export const exampleConditions: { condition: string; state: ExampleState; label: string; meaning: string }[] = [
+  { condition: 'Local disponible', state: 'confirmed', label: 'Confirmado', meaning: 'Condiciones y precio confirmados.' },
+  { condition: 'Ruta de reparto', state: 'confirmed', label: 'Confirmado', meaning: 'Vehículo, horarios y responsables definidos.' },
+  { condition: 'Demanda suficiente', state: 'reviewing', label: 'En comprobación', meaning: 'Los tres pueblos están comprobando el consumo potencial.' },
+  { condition: 'Persona interesada', state: 'interested', label: 'Interés', meaning: 'Existe interés, pero todavía hay que comprobar el encaje.' },
+  { condition: 'Vivienda disponible', state: 'pending', label: 'Pendiente', meaning: 'Hay una casa vacía, pero su propietario todavía no ha aceptado alquilarla.' },
 ]
 
-export const proposalPieces = [
-  'Viviendas realmente disponibles y con condiciones conocidas.',
-  'Trabajos, negocios, relevos y oportunidades profesionales.',
-  'Servicios cotidianos y formas realistas de acceder a ellos.',
-  'Movilidad y colaboración entre municipios.',
-  'Personas, familias, profesionales y propietarios interesados.',
-  'Límites y prioridades acordados por la comunidad.',
-]
+export const proposalPieces = ['Vivienda disponible', 'Negocio sin relevo', 'Movilidad', 'Servicio necesario', 'Profesional interesado', 'Pueblos cercanos']

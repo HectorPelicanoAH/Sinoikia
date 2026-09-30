@@ -20,103 +20,22 @@ export function HomePage() {
         <ConceptImage id="hero" priority caption="Escena conceptual: un territorio habitado y conectado." />
       </section>
 
-      <section id="problema" className="narrative-section narrative-section--soft" aria-labelledby="problem-title">
-        <div className="page-shell narrative-split">
-          <div className="narrative-copy">
-            <p className="eyebrow">El problema</p>
-            <h2 id="problem-title">Hay personas que quieren vivir en un pueblo. Y pueblos que necesitan personas.</h2>
-            <p>El problema es que rara vez se encuentran todas las condiciones a la vez. Una vivienda puede estar vacía pero no disponible. Un negocio puede necesitar relevo, pero no ofrecer una casa. Un servicio puede no sostenerse en un solo municipio, aunque sí entre varios pueblos cercanos.</p>
-            <p>Las piezas existen, pero aparecen dispersas. Quien quiere mudarse tiene que averiguarlo todo por su cuenta y quien quiere impulsar su pueblo no dispone de una forma clara de organizarlo.</p>
-          </div>
-          <ConceptImage id="problema" caption="Escena conceptual: vivienda, comercio y transporte aún desconectados." />
-        </div>
-      </section>
+    <section id="problema" className="narrative-section narrative-section--soft" aria-labelledby="problem-title"><div className="page-shell narrative-split"><div className="narrative-copy"><p className="eyebrow">El punto de partida</p><h2 id="problem-title">No faltan piezas. Falta conectarlas.</h2><p>Muchos pueblos ya tienen parte de lo que necesitan.</p><p>Una casa vacía. Un comercio sin relevo. Personas que necesitan cuidados. Un local municipal sin uso. Familias buscando otro lugar donde vivir. Un profesional que podría trabajar en varios municipios.</p><p>Por separado, ninguna de esas piezas resuelve demasiado. La oportunidad aparece cuando empiezan a encajar.</p><ul className="proposal-pieces">{proposalPieces.map((piece) => <li key={piece}>{piece}</li>)}<li className="proposal-pieces__result">Una oportunidad completa</li></ul></div><ConceptImage id="problema" caption="Escena conceptual: recursos y necesidades todavía dispersos." /></div></section>
 
-      <section id="propuesta" className="narrative-section" aria-labelledby="proposal-title">
-        <div className="page-shell narrative-split narrative-split--reverse">
-          <ConceptImage id="propuesta" caption="Escena conceptual: un plan se construye con información y acuerdos locales." />
-          <div className="narrative-copy">
-            <p className="eyebrow">La propuesta</p>
-            <h2 id="proposal-title">Reunir las piezas antes de pedir a alguien que dé el paso</h2>
-            <p>Sinoikía ayuda a un pueblo o a varios municipios cercanos a comprender qué necesitan, qué pueden ofrecer y qué condiciones deben reunirse para que una iniciativa o un proyecto de vida pueda funcionar de verdad.</p>
-            <ul className="proposal-pieces">{proposalPieces.map((piece) => <li key={piece}>{piece}</li>)}</ul>
-          </div>
-        </div>
-      </section>
+    <section id="propuesta" className="narrative-section" aria-labelledby="proposal-title"><div className="page-shell narrative-split narrative-split--reverse"><ConceptImage id="propuesta" caption="Escena conceptual: un plan se construye con información y acuerdos locales." /><div className="narrative-copy"><p className="eyebrow">Un paso antes</p><h2 id="proposal-title">Antes de buscar personas, construyamos algo que pueda funcionar.</h2><p>Sinoikía trabaja un paso antes. No queremos publicar «se busca familia para vivir en este pueblo» y esperar que funcione.</p><p>Primero preguntamos: ¿De qué podría vivir? ¿Dónde podría vivir? ¿Hay demanda suficiente? ¿Qué servicios necesita? ¿Puede acceder a ellos aunque estén en otro pueblo? ¿Quién tiene que comprometerse? ¿Qué falta todavía?</p><p className="narrative-highlight">No buscamos llenar pueblos. Buscamos crear las condiciones para poder vivir en ellos.</p></div></div></section>
 
-      <section id="como-funciona" className="narrative-section narrative-section--dark" aria-labelledby="process-title">
-        <div className="page-shell">
-          <p className="eyebrow">Cómo funciona</p>
-          <h2 id="process-title">Del conocimiento del lugar a un plan compartido</h2>
-          <ol className="narrative-steps">
-            {processSteps.map((step) => <li key={step.number}><span>{step.number}</span><h3>{step.title}</h3><p>{step.description}</p></li>)}
-          </ol>
-          <div className="process-photo">
-            <ConceptImage id="vivienda" caption="Escena conceptual: comprobar una casa antes de llamarla disponible." />
-            <p>Entender el territorio también significa comprobar sobre el terreno qué recursos están realmente disponibles.</p>
-          </div>
-        </div>
-      </section>
+    <section className="narrative-section narrative-section--soft" aria-labelledby="discovery-title"><div className="page-shell narrative-split"><div className="narrative-copy"><p className="eyebrow">Descubrir posibilidades</p><h2 id="discovery-title">Y a veces la oportunidad todavía no existe.</h2><p>Un pueblo puede no tener suficiente demanda para mantener un servicio. Tres pueblos juntos, sí.</p><p>Un comercio puede no ser viable por sí solo. Combinado con reparto, otro servicio o varios municipios, quizá sí.</p><p>Una vivienda vacía puede no significar nada. Vinculada a una actividad, servicios accesibles y una persona adecuada, puede convertirse en parte de una solución.</p><p className="narrative-highlight">No solo reunimos oportunidades. Ayudamos a descubrirlas.</p></div><ConceptImage id="comercio" caption="Escena conceptual: varios pueblos colaboran para sostener una actividad." /></div></section>
 
-      <section id="ejemplo" className="narrative-section example-section" aria-labelledby="example-title">
-        <div className="page-shell">
-          <div className="example-intro">
-            <div>
-              <p className="eyebrow">Ejemplo conceptual · no es una oferta real</p>
-              <h2 id="example-title">Tres pueblos quieren recuperar un comercio cotidiano</h2>
-              <p>Por separado, ninguno sostiene una tienda completa. Juntos podrían mantener un pequeño comercio con reparto, punto de recogida y atención programada. Para convertir la idea en una oportunidad real, el plan necesita reunir varias condiciones.</p>
-            </div>
-            <ConceptImage id="comercio" caption="Escena conceptual: el reparto conecta la actividad de varios pueblos." />
-          </div>
-          <ExampleChecklist />
-          <p className="example-outro">El plan no se presentará como listo mientras falte la vivienda, aunque otras condiciones estén cubiertas. La checklist hace visible el bloqueo y permite saber qué conversación debe ocurrir a continuación.</p>
-        </div>
-      </section>
+    <section id="ejemplo" className="narrative-section example-section" aria-labelledby="example-title"><div className="page-shell"><div className="example-intro"><div><p className="eyebrow">Ejemplo conceptual</p><h2 id="example-title">Tres pueblos. Ninguno puede mantener una tienda.</h2><p>Hay demanda, pero está repartida. En lugar de asumir que el comercio es inviable, Sinoikía ayuda a explorar otra posibilidad: una pequeña tienda con reparto y puntos de recogida que dé servicio a los tres pueblos.</p></div><ConceptImage id="comercio" caption="Escena conceptual: el reparto conecta la actividad de varios pueblos." /></div><ExampleChecklist /><h3 className="example-status">El plan todavía no está listo.</h3><p className="example-outro">Sinoikía no oculta lo que falta para hacer viable una oportunidad. Lo convierte en el siguiente problema que hay que resolver.</p></div></section>
 
-      <section className="narrative-section narrative-section--soft" aria-labelledby="honesty-title">
-        <div className="page-shell honesty-layout">
-          <div className="narrative-copy">
-            <p className="eyebrow">Honestidad y progreso</p>
-            <h2 id="honesty-title">Saber qué falta también es avanzar</h2>
-            <p>Una persona interesada no es todavía un compromiso. Una vivienda vacía no es necesariamente una vivienda disponible. Una ayuda solicitada no es financiación concedida. Sinoikía diferencia lo que se ha propuesto, lo que está siendo revisado y lo que ya se ha confirmado.</p>
-          </div>
-          <ul className="honesty-points">
-            <li>Una condición imprescindible puede impedir que un plan esté listo.</li>
-            <li>Los datos muestran fuente y fecha de revisión.</li>
-            <li>Los estados pueden retroceder si cambia la realidad.</li>
-            <li>Cualquier porcentaje se presenta con desglose, sin prometer éxito.</li>
-          </ul>
-        </div>
-      </section>
+    <section id="como-funciona" className="narrative-section narrative-section--dark" aria-labelledby="process-title"><div className="page-shell"><p className="eyebrow">Cómo funciona</p><h2 id="process-title">De una necesidad a una oportunidad real.</h2><ol className="narrative-steps">{processSteps.map((step) => <li key={step.number}><span>{step.number}</span><h3>{step.title}</h3><p>{step.description}</p></li>)}</ol></div></section>
 
-      <section className="narrative-section pathways-section" aria-labelledby="pathways-title">
-        <div className="page-shell">
-          <p className="eyebrow">Dos formas de empezar</p>
-          <h2 id="pathways-title">Una puerta para cada pregunta</h2>
-          <div className="pathways-grid">
-            <article>
-              <ConceptImage id="personas" caption="Escena conceptual: conocer la vida cotidiana del lugar." />
-              <div><p className="eyebrow">Para personas y hogares</p><h3>Busca una vida que pueda sostenerse</h3><p>Cuéntanos qué necesitas, qué sabes hacer, quién forma parte de tu hogar y en qué condiciones te plantearías un cambio. Te mostraremos lugares donde podrías encajar, condiciones todavía pendientes y necesidades a las que podrías contribuir.</p><Link className="button button--primary" to="/descubrir">Encontrar mi lugar</Link></div>
-            </article>
-            <article>
-              <ConceptImage id="municipios" caption="Escena conceptual: una ruta compartida conecta pueblos cercanos." />
-              <div><p className="eyebrow">Para municipios</p><h3>Convierte necesidades dispersas en un plan común</h3><p>Ordena la realidad del territorio, compara opciones y prepara un plan con condiciones, responsables y límites claros. El equipo de Sinoikía revisará la primera publicación para asegurar que la información sea comprensible, prudente y verificable.</p><Link className="button button--ghost" to="/municipios">Activar mi municipio</Link></div>
-            </article>
-          </div>
-        </div>
-      </section>
+    <section className="narrative-section territory-vision" aria-labelledby="territory-title"><div className="page-shell narrative-split"><div className="narrative-copy"><p className="eyebrow">Territorio compartido</p><h2 id="territory-title">La vida no entiende de términos municipales.</h2><p>El colegio puede estar a 8 minutos. El médico, a 12. El trabajo puede repartirse entre tres pueblos. Una furgoneta puede prestar servicio a cinco.</p><p>Sinoikía no pregunta si un pueblo tiene de todo. Pregunta si una persona puede acceder a todo lo que necesita. Por eso varios pueblos cercanos pueden funcionar como una misma comunidad.</p></div><ConceptImage id="territorio" caption="Escena conceptual: la vida cotidiana cruza límites municipales." /></div></section>
 
-      <section className="narrative-section territory-vision" aria-labelledby="territory-title">
-        <div className="page-shell narrative-split">
-          <div className="narrative-copy"><p className="eyebrow">Un territorio compartido</p><h2 id="territory-title">Una comunidad completa puede abarcar varios pueblos</h2><p>No hace falta que cada pueblo tenga todos los servicios dentro de su término municipal. Hace falta que las personas puedan acceder a lo necesario para sostener su vida cotidiana. Sinoikía ayuda a organizar ese territorio compartido como una comunidad y no como una suma de municipios aislados.</p></div>
-          <ConceptImage id="territorio" caption="Escena conceptual: la vida cotidiana cruza límites municipales." />
-        </div>
-      </section>
+    <section className="narrative-section pathways-section" aria-labelledby="pathways-title"><div className="page-shell"><p className="eyebrow">Dos formas de empezar</p><h2 id="pathways-title">Una puerta para cada pregunta</h2><div className="pathways-grid"><article><ConceptImage id="personas" caption="Escena conceptual: conocer la vida cotidiana del lugar." /><div><p className="eyebrow">Personas</p><h3>Quiero vivir en un pueblo</h3><p>No empieces buscando una casa y resolviendo después el resto. Cuéntanos qué necesitas, qué sabes hacer y qué vida buscas. Sinoikía podrá mostrarte territorios donde esas piezas empiezan a encajar y qué cosas todavía no están resueltas.</p><Link className="button button--primary" to="/descubrir">Descubrir dónde encajo</Link></div></article><article><ConceptImage id="municipios" caption="Escena conceptual: una ruta compartida conecta pueblos cercanos." /><div><p className="eyebrow">Municipios</p><h3>Quiero activar mi pueblo</h3><p>No publiques necesidades aisladas. Reúne vivienda, actividad, servicios, recursos y necesidades. Sinoikía ayuda a explorar qué oportunidades podrían construirse y qué hace falta para convertirlas en realidad.</p><Link className="button button--ghost" to="/municipios">Activar mi municipio</Link></div></article></div></div></section>
 
-      <section className="closing-section" aria-labelledby="closing-title">
-        <ConceptImage id="cierre" caption="Escena conceptual: una comunidad se reconoce en su vida cotidiana." />
-        <div className="page-shell closing-section__copy"><p className="eyebrow">Habitar juntos</p><h2 id="closing-title">Los pueblos ya tienen muchas de las piezas</h2><p>Sinoikía ayuda a encontrarlas, conectarlas y descubrir cuáles siguen faltando. Porque atraer habitantes es solo el principio. El objetivo es hacer posible que puedan quedarse.</p><Link className="button button--light" to="/descubrir">Encontrar mi lugar</Link></div>
-      </section>
-    </main>
-  )
+    <section className="narrative-section narrative-section--soft" aria-labelledby="honesty-title"><div className="page-shell honesty-layout"><div className="narrative-copy"><p className="eyebrow">Honestidad</p><h2 id="honesty-title">Saber qué falta también importa.</h2><p>Vacía no significa disponible. Interesado no significa comprometido. Solicitado no significa concedido.</p><p>Sinoikía diferencia lo que sabemos, lo que estamos comprobando y lo que está realmente confirmado. Porque alguien que se plantea cambiar su vida necesita saber qué existe de verdad y qué todavía depende de algo o de alguien.</p></div><ul className="honesty-points"><li>Confirmado: existe y sus condiciones están comprobadas.</li><li>En comprobación: falta contrastar información.</li><li>Interés: hay una persona o entidad, pero no un compromiso.</li><li>Pendiente: una condición imprescindible sigue sin resolverse.</li></ul></div></section>
+
+    <section className="closing-section" aria-labelledby="closing-title"><ConceptImage id="cierre" caption="Escena conceptual: una comunidad se reconoce en su vida cotidiana." /><div className="page-shell closing-section__copy"><p className="eyebrow">Habitar juntos</p><h2 id="closing-title">El futuro es rural.</h2><h3>Hagamos que también sea viable.</h3><p>Los pueblos no necesitan convertirse en pequeñas ciudades ni tener todos los servicios dentro de sus límites. Necesitan conectar mejor las viviendas, actividades, servicios, recursos y personas que ya existen, y descubrir qué sigue faltando.</p><p>Sinoikía quiere ayudar a convertir esas piezas dispersas en lugares donde quedarse tenga sentido.</p><div className="narrative-actions"><Link className="button button--light" to="/descubrir">Quiero descubrir dónde encajo</Link><Link className="button button--ghost button--ghost-light" to="/municipios">Quiero activar mi municipio</Link></div></div></section>
+  </main>
 }
