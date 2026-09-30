@@ -9,13 +9,14 @@ export function HomePage() {
       <section className="narrative-hero page-shell" aria-labelledby="hero-title">
         <div className="narrative-hero__copy">
           <p className="eyebrow">Sinoikía · Habitar juntos</p>
-          <h1 id="hero-title">El futuro es rural</h1>
-          <p className="narrative-hero__lead">Sinoikía nace de una idea sencilla: un pueblo cobra vida cuando vivienda, trabajo, servicios y personas consiguen encajar.</p>
-          <p>Ayudamos a pueblos y personas a reunir esas piezas y convertir necesidades dispersas en planes de vida posibles.</p>
+          <h1 id="hero-title">El futuro es rural.</h1>
+          <p className="narrative-hero__lead">Pero para vivir en un pueblo no basta con encontrar una casa.</p>
+          <p>Vivienda, trabajo, servicios, movilidad y comunidad tienen que encajar. Sinoikía ayuda a los pueblos a descubrir qué oportunidades pueden construir con lo que ya tienen, qué les falta y qué necesitan resolver antes de buscar a las personas que puedan hacerlas realidad.</p>
           <div className="narrative-actions">
-            <Link className="button button--primary" to="/descubrir">Quiero encontrar mi lugar</Link>
+            <Link className="button button--primary" to="/descubrir">Quiero descubrir dónde encajo</Link>
             <Link className="button button--ghost" to="/municipios">Quiero activar mi municipio</Link>
           </div>
+          <p className="hero-support">Sinoikía significa «habitar juntos».</p>
         </div>
         <ConceptImage id="hero" priority caption="Escena conceptual: un territorio habitado y conectado." />
       </section>
@@ -38,4 +39,5 @@ export function HomePage() {
 
     <section className="closing-section" aria-labelledby="closing-title"><ConceptImage id="cierre" caption="Escena conceptual: una comunidad se reconoce en su vida cotidiana." /><div className="page-shell closing-section__copy"><p className="eyebrow">Habitar juntos</p><h2 id="closing-title">El futuro es rural.</h2><h3>Hagamos que también sea viable.</h3><p>Los pueblos no necesitan convertirse en pequeñas ciudades ni tener todos los servicios dentro de sus límites. Necesitan conectar mejor las viviendas, actividades, servicios, recursos y personas que ya existen, y descubrir qué sigue faltando.</p><p>Sinoikía quiere ayudar a convertir esas piezas dispersas en lugares donde quedarse tenga sentido.</p><div className="narrative-actions"><Link className="button button--light" to="/descubrir">Quiero descubrir dónde encajo</Link><Link className="button button--ghost button--ghost-light" to="/municipios">Quiero activar mi municipio</Link></div></div></section>
   </main>
+  )
 }
